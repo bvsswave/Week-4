@@ -55,6 +55,35 @@ textarea {
     margin: 20px;
 }
 
+#Submit {
+    background: purple;
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+}
+
+labe {
+    margin-right: 10px;
+}
+input {
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px solid lightgray;
+}4
+
+h1 {
+    text-align: center;
+}
+
+li {
+    background-color: purple;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+    color: white;
+}
 /* body {
     background-color: #1b1249;
     padding: 40px;
