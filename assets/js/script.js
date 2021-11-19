@@ -18,21 +18,37 @@ var questions = [
 },
 ];
 
+// declared variables
+var score = 0;
+var questionIndex = 0;
 
-function startGame() {
-    startPageEl.setAttribute("class", "hide");
-    qaPageEl.setAttribute("class", "show");
-    timerEl.textContent = clock;
-    timeInt = setInterval(counDown, 1000);
-    displayQa();
-}
+// working code
+// declared variables
+var currentTime = document.querySelector("#currentTime");
+var timer = document.querySelector("#startTime");
+var qeustionsDiv = document.querySelector("#questionsDiv");
+var wrapper = document.querySelector("#wrapper");
 
-function countDown () {
-    clock--;
-    timerEl.textContent = clock;
-    if (clock <= 0) {
-        clearInterval(timeInt);
-        gameOver();
-    }
-}
+// seconds left is 15 seconds per question:
+var secondsLeft = 45
+var holdInterval = 0;
+var penalty = 10;
+var ulCreate = document.createElement("ul");
 
+timer.addEventListener("click", function () {
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function () {
+            secondsLeft--;
+            currentTime.textContent = "Time: " + secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(holdInterval);
+                allDone();
+                currentTime.textContent = "Time's up!";
+            }
+        }, 1000);
+        }
+        render(questionIndex);
+    });
+
+    
