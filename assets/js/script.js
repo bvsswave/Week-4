@@ -60,7 +60,16 @@ function render(questionIndex) {
         // appends question title only
         var userQuestion = questions[questionIndex].title;
         var userChocies = questions[questionIndex].choices;
-        qeustionsDiv.textContent = userQuestions;
+        questionsDiv.textContent = userQuestions;
     }
-}
+
+    userChoices.forEach(function (newItem) {
+        varlistItem = document.createElement("li");
+        listItem.textContent = newitem;
+        questionsDiv.appendChild(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+
+    }
 
