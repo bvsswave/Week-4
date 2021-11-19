@@ -51,4 +51,16 @@ timer.addEventListener("click", function () {
         render(questionIndex);
     });
 
-    
+function render(questionIndex) {
+    // clears existing data
+    qeustionsDiv.innerHTML = "";
+    ulCreate.innerHTML = "";
+    // for looops to loop through all info in array
+    for (var i = 0; i < questions.length; i++) {
+        // appends question title only
+        var userQuestion = questions[questionIndex].title;
+        var userChocies = questions[questionIndex].choices;
+        qeustionsDiv.textContent = userQuestions;
+    }
+}
+
