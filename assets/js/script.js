@@ -71,5 +71,21 @@ function render(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 
+}
+// event to compare choices with answer
+function compare(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        // correct condition
+        if (element.textContent == questions[questionIndex].answer) {
+            score++;
+            createDivDiv.textContent = "Correct! The answer is: " + questions[questionIndex].answer;
+            // correct condition
+        }
     }
+}
 
