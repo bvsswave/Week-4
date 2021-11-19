@@ -84,83 +84,48 @@ li {
     font-size: 18px;
     color: white;
 }
-/* body {
-    background-color: #1b1249;
-    padding: 40px;
-  }
 
-  header {
-      width: 100%;
-      background-color: #1b1249;
-  }
-
-  header div {
-      margin: 25px;
-      font-size: 30px;
-      color: #CA9116;
-  }
-
-  #timing {
-      display: inline-block;
-      text-align: left;
-  }
-
-  #high-score a {
-      text-decoration: none;
-      color: inherit;
-  }
-
-  #start-page,
-  #qa-page,
-  #results {
-      margin: auto;
-      width: 50%;
-      height: 75%;
-      text-align: center;
-      line-height: 100px;
-      background-color:#CA9116;
-      border: #C60DD3;
-      border-radius: 25px;
-  }
-
-  body h1 {
-      font-size: 120px;
-      color: #BA473B;
-  }
-
-  body h2,
-  h3 {
-      font-size: 3opx;
-      color: #BA473B;
-  }
-
-  button {
-      font-size: 32px;
-      color: #CA9116;
-      border-radius: 10px;
-      margin: 20px;
-  }
-
-.btn {
-    width: 80%;
+#createDiv {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
 }
 
-input {
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #CA9116;
-    background-color: #1b1249;
-    border: #C60DD3 2px solid;
-}
+@media screen and (max-width: 786px) {
+    body {
+        max-width: 786px;
+    }
 
-.hide {
-    display:none;
-}
+    #wrapper {
+        position: absolute;
+        left: 20%;
+    }
 
-.show {
-    display:block;
-} */
+    a {
+        margin-left: 20%;
+    }
 
+    #goBack {
 
+        position: relative;
+        left: 55%;
+    }
 
+    #clear {
+
+        position: relative;
+        right: 5%;
+    }
+
+    @media screen and (max-width: 640px) {
+        body {
+            min-width: 640px;
+        }
+        #wrapper {
+            position: absolute;
+            left: 10%;
+        }
+        a {
+            margin-left: 10%;
+        }
+
+    }
