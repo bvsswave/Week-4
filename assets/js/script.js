@@ -1,20 +1,5 @@
-var startPageEl = document.getElementById("start-page");
-var qaPageEl = document.getElementById("qa-page");
-var resultsEl = document.getElementById("results");
-var startbuttonEl = doucment.getElementById("start-btn");
-var submitButtonEl = document.getElementById("submit-btn");
-var timerEl = document.getElementById("time");
-var initialsEl = document.querySelector("#initials");
-var resultsDivEl = document.getElementById("results");
-var saveScoreEl = document.getElementById("submit-btn");
-var playerScoreEl = document.getElementById("player-score");
-
-var clock = 30;
-var currentQuestionIndex = 0;
-var playerScore = 0;
-var timeInt;
-var quizList = [
-    // questions
+// questions
+var questions = [
     {
         question: "Inside which HTML element do we put the JavaScript?",
         choices: ["<javascript>", "<scripting>", "<script>", "<js>"],
@@ -33,6 +18,7 @@ var quizList = [
 },
 ];
 
+
 function startGame() {
     startPageEl.setAttribute("class", "hide");
     qaPageEl.setAttribute("class", "show");
@@ -49,3 +35,4 @@ function countDown () {
         gameOver();
     }
 }
+
