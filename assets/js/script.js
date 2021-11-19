@@ -144,6 +144,32 @@ function compare(event) {
 
         questionsDiv.appendChild(createSubmit);
 
+        // Event listener to capture initials and local storage for initials and score
+        createSubmit.addEventListener("click", function () {
+            var initials = createInput.value;
+
+            if (initals === null) {
+
+                console.log("No value entered!");
+            } else {
+                var finalScore = {
+                    initials: initials,
+                    score: timeremaining
+                }
+                console.log(finalScore);
+                var allScores = localStorage.getItem("allScores");
+                if (allScores === null) {
+                    allScores = [];
+                } else {
+                    allScores = JSON.parse(allScores);
+                }
+                allScores.push(finalScore);
+                var newScore = JSON.stringify(allScores);
+                localStorage.setItem("allScores", newSCore);
+                // goes to final page
+                window.location.replace("./HighScores.html");
+            }
+        })
     }
 
 }
