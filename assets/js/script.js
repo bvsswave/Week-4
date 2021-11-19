@@ -121,7 +121,30 @@ function compare(event) {
 
             questionsDiv. appendChild(createP2);
         }
-        
+        // label
+        var createLabel = document.createElement("label");
+        createLabel.setAttribute("id", "createLabel");
+        createLabel.textContent = "Enter your initials: ";
+
+        questionsDiv.appendChild(createLabel);
+
+        // input
+        var createInput = document.createElement("input");
+        createInput.setAttribute("type", "text");
+        createInput.setAttribute("id", "initials");
+        createInput.textcontent = "";
+
+        questionsDiv.appendChild(creatInput);
+
+        // submit
+        var createSubmit = document.createElement("button");
+        createSubmit.setAttribute("type", "submit");
+        createSubmit.setAttribute("id", "Submit");
+        createSubmit.textcontent = "Submit";
+
+        questionsDiv.appendChild(createSubmit);
+
     }
+
 }
 
