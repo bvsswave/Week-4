@@ -85,7 +85,26 @@ function compare(event) {
             score++;
             createDivDiv.textContent = "Correct! The answer is: " + questions[questionIndex].answer;
             // correct condition
+        } else {
+            // will deduct -5 seconds off second Left for wrong answers
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textcontent = "Wrong! The correct answer is: " + questions[questionIndex].answer;
         }
+            render(questionsIndex);
+    }
+    questionsDiv.appendChild(createDiv);
+
+    // append last page
+    function allDone() {
+        questionsDiv.innerHTML = "";
+        currentTime.innerHTML = "";
+
+        // heading:
+        var createH1 = document.createElement("h1)";
+        createH1.setAttribute("id", "createH1");
+        createH1.textContent = "All Done!"
+        
+        questionsDiv.appendChild(createH1);
     }
 }
 
