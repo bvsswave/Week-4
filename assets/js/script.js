@@ -100,11 +100,28 @@ function compare(event) {
         currentTime.innerHTML = "";
 
         // heading:
-        var createH1 = document.createElement("h1)";
+        var createH1 = document.createElement("h1");
         createH1.setAttribute("id", "createH1");
         createH1.textContent = "All Done!"
         
         questionsDiv.appendChild(createH1);
+
+        // paragraph
+        var creatP = document.createElement("p");
+        createImageBitmap.setAttribute("id", "createP");
+
+        questionsDiv.appendChild(createP);
+
+        // calculates time remaining and replaces it with score
+        if (secondLeft >= 0) {
+            var timeremaining = secondsLeft;
+            var createP2 = document.createElement("p");
+            clearInterval(holdInterval);
+            createP.textContent = "Your final score is: " + timeremaining;
+
+            questionsDiv. appendChild(createP2);
+        }
+        
     }
 }
 
